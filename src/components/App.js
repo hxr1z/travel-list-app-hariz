@@ -9,10 +9,37 @@ function Logo() {
 }
 
 function Form() {
+  const [description, setDescription] = useState("");
+  const [quantity, setQuantity] = useState(1);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+  }  
   return (
-    <form className="add-form">
+    <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need to pack?</h3>
+      <select>
+        <option value={1}>1</option>
+        <option value={2}>2</option>
+        <option value={3}>3</option>
+      </select>
+      <input 
+      type="text" 
+      placeholder="Item..."
+      value={description}
+      onChange={(e) => setDescription(e.target.value)}
+      />
+      <button>Add</button>
     </form>
+  );
+}
+
+function Item({item}) {
+  return (
+    <li style={{ textDecoration: item.packed ? "line-through" : "none" }}>
+      {item.quantity} - {item.description}
+    </li>
   );
 }
 
@@ -21,7 +48,7 @@ function PackingList() {
     <div className="list">
       <ul>
         {initialItems.map((item) => (
-          <li>{item.description}</li>
+          <Item key={item.id} item={item} />
         ))}
       </ul>
     </div>
