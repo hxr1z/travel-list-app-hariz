@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/travel-list-app-hariz/static/css/main.900a66e4.css",
+    "main.js": "/travel-list-app-hariz/static/js/main.0365b455.js",
+    "index.html": "/travel-list-app-hariz/index.html",
+    "main.900a66e4.css.map": "/travel-list-app-hariz/static/css/main.900a66e4.css.map",
+    "main.0365b455.js.map": "/travel-list-app-hariz/static/js/main.0365b455.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.900a66e4.css",
+    "static/js/main.0365b455.js"
+  ]
+}
